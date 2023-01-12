@@ -1,0 +1,3 @@
+WTFTests 2 0.0306826
+StandartTests 15 0.0452476
+---

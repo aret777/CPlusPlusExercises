@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\STLExercises.dir\\main.cpp.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\main.cpp\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/main.cpp"
+},
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build/googletest/googlemock",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\googletest\\googlemock\\src\\gmock-all.cc\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build/googletest/googlemock",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\googletest\\googlemock\\src\\gmock_main.cc\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build/googletest/googletest",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\googletest\\googletest\\src\\gtest-all.cc\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build/googletest/googletest",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\googletest\\googletest\\src\\gtest_main.cc\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "C:/Users/User/Documents/VS Projects/STLExercises/build/test",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/StandartTests.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\StandartTests.dir\\MainTests.cpp.obj -c \"C:\\Users\\User\\Documents\\VS Projects\\STLExercises\\test\\MainTests.cpp\"",
+  "file": "C:/Users/User/Documents/VS Projects/STLExercises/test/MainTests.cpp"
+}
+]

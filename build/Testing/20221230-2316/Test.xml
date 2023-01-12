@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20221230-2316-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.25.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-8DBJDJP"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="10250"
+	TotalPhysicalMemory="8074"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1800"
+	>
+	<Testing>
+		<StartDateTime>Dec 31 01:17 ????????? (????)</StartDateTime>
+		<StartTestTime>1672442242</StartTestTime>
+		<TestList>
+			<Test>./test/StandartTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>StandartTests</Name>
+			<Path>./test</Path>
+			<FullName>./test/StandartTests</FullName>
+			<FullCommandLine>"C:\Users\User\Documents\VS Projects\STLExercises\build\test\StandartTests.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0524765</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>"C:\Users\User\Documents\VS Projects\STLExercises\build\test\StandartTests.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNUbFOwzAQ3fMVNzZDLGBEYqjSioEWqqRlSSLkmmtk5PiQzwE+HyepogaJKm+wzrrn9+75stZabWtopLaLGE6OGkjvywOj4/4sV6TaBq3n8jWHnaMPVKHO95v1DzqlGbmsiWqDHtlfluxUWXfVWyculIqKhxEVZGfnO+g4PFjf9hfgVnsUUZGMqODR0FGaoY/2Szuy3VjA6JP28w95Ino5a1RAdniGHtWkI/bhxVYqR5ySMSGlJhvoA16e5tBhcQMNx1dMtsv0imbojhKz4gxs8OSliaN5H+ZRuuSdvu10H//uAZy0YmoUEuyWeb5edfnOD0X0C/yvu/4=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Dec 31 01:17 ????????? (????)</EndDateTime>
+		<EndTestTime>1672442242</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\StandartTests.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\StandartTests.dir/objects.a @CMakeFiles\StandartTests.dir\objects1
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\StandartTests.dir/objects.a -Wl,--no-whole-archive -o StandartTests.exe -Wl,--out-implib,libStandartTests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\StandartTests.dir\linkLibs.rsp

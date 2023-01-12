@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\WTFTests.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\WTFTests.dir/objects.a @CMakeFiles\WTFTests.dir\objects1
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\WTFTests.dir/objects.a -Wl,--no-whole-archive -o WTFTests.exe -Wl,--out-implib,libWTFTests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\WTFTests.dir\linkLibs.rsp

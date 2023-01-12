@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libSTLExercises.a CMakeFiles/STLExercises.dir/main.cpp.obj
+C:\mingw64\bin\ranlib.exe libSTLExercises.a

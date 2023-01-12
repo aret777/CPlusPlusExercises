@@ -1,0 +1,42 @@
+Start testing: Dec 27 21:21 ????????? (????)
+----------------------------------------------------------
+1/1 Testing: StandartTests
+1/1 Test: StandartTests
+Command: "C:/Users/User/Documents/VS Projects/STLExercises/build/test/StandartTests.exe"
+Directory: C:/Users/User/Documents/VS Projects/STLExercises/build/test
+"StandartTests" start time: Dec 27 21:21 ????????? (????)
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\User\Documents\VS Projects\STLExercises\googletest\googletest\src\gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from STLExercises
+[ RUN      ] STLExercises.TestMacrosCollection
+[       OK ] STLExercises.TestMacrosCollection (0 ms)
+[ RUN      ] STLExercises.MAC
+C:\Users\User\Documents\VS Projects\STLExercises\test\MainTests.cpp:20: Failure
+Expected equality of these values:
+  MAC(x,y,sum)
+    Which is: 458
+  sum
+    Which is: 58
+Function dont work
+[  FAILED  ] STLExercises.MAC (0 ms)
+[----------] 2 tests from STLExercises (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] STLExercises.MAC
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"StandartTests" end time: Dec 27 21:21 ????????? (????)
+"StandartTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 27 21:21 ????????? (????)
