@@ -13,7 +13,8 @@ using namespace std;
 //#include "Headers/ArrayExercisesLeetCode.hpp"
 //#include "Headers/STLVector.hpp"
 //#include "Headers/STLMap.hpp"
-#include "Headers/StringExercisesLeetCode.hpp"
+//#include "Headers/StringExercisesLeetCode.hpp"
+#include "Headers/LinkedListExercisesLeetCode.hpp"
 
 #ifndef TESTING
 main(){
@@ -26,18 +27,35 @@ main(){
     vector <char> c2 = {'H','e','l','l','o'};
     vector<char> c3 = {'A', ' ', 'm', 'a', 'n', ',', ' ', 'a', ' ', 'p', 'l', 'a', 'n', ',', ' ', 'a', ' ', 'c', 'a', 'n', 'a', 'l', ':', ' ', 'P', 'a', 'n', 'a', 'm', 'a'};
     int a1 = 123, a2 = 3456700, a3 = -592, a4 = 2;
-    string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac";
+    string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac", s6 = "race";
     vector <string> vs1 = {"babe", "babushka", "babaika", "bababababab"};
 
-    Solution6 myObj;
-    cout << myObj.longestCommonPrefix(vs1);
+    //list creation
+    ListNode* head = new ListNode(1);
+    ListNode* current = head;
+
+    for (size_t i = 2; i <= 5; i++) {
+        current->next = new ListNode(i);
+        current = current->next;
+    }
+    current->next = nullptr;
+    //another list creation
+    //ListNode* head = new ListNode({9, new ListNode(8, new ListNode(7, new ListNode(6, new ListNode(5))))});
+
+    Solution3 myObj;
+    cout << myObj.reverseList(head);
     cout << endl;
-    /*cout << myObj.isPalindrome(s2);
-    cout << endl;
+    //cout << myObj.removeNthFromEnd(s2, s6);
+    /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;
     myObj.reverse(a4); */
 
-
+    current = head;
+    while(current != nullptr) {
+        ListNode* next = current->next;
+        delete current;
+        current = next;
+    }
 }
 #endif

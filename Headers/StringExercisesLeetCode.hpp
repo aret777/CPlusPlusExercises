@@ -24,12 +24,13 @@ class Solution {
 public:
     void reverseString(vector<char>& str) {
         int size = str.size();
-        for (int i = 0, j = size-1; i < size/2 && j >= size/2; i++, j--){
+        for (size_t i = 0, j = size-1; i < size/2 && j >= size/2; i++, j--){
             swap(str[i], str[j]);
         }
 
         for (vector<char>::iterator i = str.begin(); i != str.end(); i++){
-            cout << *i << " ";}
+            cout << *i << " ";
+        }
         cout << endl << "End of final line" << endl;   
     }
 };
@@ -56,14 +57,16 @@ public:
   
         string str = to_string(x);
         bool isNegative = (str[0] == '-');
-        if(isNegative) {str.erase(0,1);}
+        if (isNegative) {str.erase(0,1);}
         
-        for (int i=0; i<str.size(); i++){
+        for (size_t i = 0; i < str.size(); i++){
             cout << str[i] << " ";
         }
         std::reverse(str.begin(), str.end());
         long long int result = stoll(str); //stoll converts a string to a long long int
-        if (result > 2147483647 || result < -2147483648) {return 0;}
+        if (result > 2147483647 || result < -2147483648) {
+            return 0;
+        }
         cout << "Result: " << result;
 
         if (isNegative) {return -result;}
@@ -89,11 +92,13 @@ public:
             myMap[c]++;
         }
         for (auto iter = myMap.begin(); iter != myMap.end(); ++iter) {
-        cout << iter->first << ": " << iter->second << " ";
+            cout << iter->first << ": " << iter->second << " ";
         }
-        for (int i = 0; i < myString.length(); i++) {
+        for (size_t i = 0; i < myString.length(); i++) {
             char c = myString[i];
-            if (myMap[c] == 1) {return i;}
+            if (myMap[c] == 1) {
+                return i;
+            }
         }
         return -1;
     }
@@ -116,24 +121,28 @@ public:
     bool isAnagram(string OrigStr, string CompStr) {
         unordered_map<char, int> myMap;
 
-        for (int i = 0; i < OrigStr.length(); i++) {
+        for (size_t i = 0; i < OrigStr.length(); i++) {
             char c = OrigStr[i];
             myMap[c]++;
         }
 
         for (auto iter = myMap.begin(); iter != myMap.end(); ++iter) { //showing on terminal
-        cout << iter->first << ": " << iter->second << " " << endl;
+            cout << iter->first << ": " << iter->second << " " << endl;
         }
         
-        for (int i = 0; i < CompStr.length(); i++) {
+        for (size_t i = 0; i < CompStr.length(); i++) {
             auto it = myMap.find(CompStr[i]);
             if (it != myMap.end()) { 
                 it->second -= 1; //found letter, removing 1 from value
                 cout << "Removing letter " << CompStr[i] << endl;
                 cout << it->first << ": " << it->second << " " << endl;
-                if (it->second < 0) {return false;}
-            } else {cout << "Didnt found letter " << CompStr[i] << endl;
-                return false;}
+                if (it->second < 0) {
+                    return false;
+                }
+            } else {
+                cout << "Didnt found letter " << CompStr[i] << endl;
+                return false;
+            }
             
         }
 
@@ -171,11 +180,15 @@ public:
         }
 
         cout << myString << " lenght is: " << myString.length()/2 << endl;
-        for (int i = 0, k = myString.length()-1; ((i <= myString.length()/2)&&(k >= myString.length()/2)); ) {
+
+        for (size_t i = 0, k = myString.length()-1; ((i <= myString.length()/2)&&(k >= myString.length()/2)); ) {
             if (myString[i] != myString[k]) {
                 cout << "Letters " << myString[i] << " and " << myString[k] << " not equal at iteration k: " << k << " and i: " << i; 
-                return false;}
-            else {i++; k--; }
+                return false;
+            }
+            else {
+                i++; k--; 
+            }
             //cout << "Comparing i: " << myString[i] << " and k: " << myString[k] << endl;}
         }
         return true;
@@ -197,21 +210,69 @@ class Solution6 {
 public:
     string longestCommonPrefix(vector<string>& strs) {
         if (strs.empty()) return "";
+
         string prefix = "";
-        int smallestword = 200;
-        for (int k = 0; k < strs.size(); k++){ //counting size of words in vector
-                if (strs[k].length() < smallestword) {smallestword = strs[k].length();}
+        int smallestWord = 200;
+
+        for (size_t k = 0; k < strs.size(); k++){ //counting size of words in vector
+            if (strs[k].length() < smallestWord) {
+                smallestWord = strs[k].length();
+            }
         }
 
-        for (int i = 0; i < smallestword; i++){//iterating letters
+        for (size_t i = 0; i < smallestWord; i++) {//iterating letters
             char currentChar = strs[0][i]; //assigning first letter of first word
-            for (int k = 0; k < strs.size(); k++){ //iterating words in vector
-                if (currentChar==strs[k][i]){continue;} else {return prefix;}
+            for (size_t k = 0; k < strs.size(); k++) { //iterating words in vector
+                if (!(currentChar == strs[k][i])){
+                    return prefix;
+                }
             }
-            //if just some word have common first letter, return {}
-            prefix+=currentChar;
+            prefix += currentChar;
         }
         return prefix;
     }
 };
+
+/* Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, 
+or -1 if needle is not part of haystack.
+Example 1:
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
+The first occurrence is at index 0, so we return 0.
+
+Example 2:
+Input: haystack = "leetcode", needle = "leeto"
+Output: -1
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
+ */
+
+class Solution7 {
+public:
+    int strStr(string haystack, string needle) {
+        int needleLength = needle.length();
+        cout << "Lengt: " << needleLength << endl;
+        int countingLetters = 0;
+
+        for (size_t i = 0; i < haystack.length(); i++) {
+            countingLetters = 0;
+            if (haystack[i] == needle[0]) {
+                for (size_t k = 0; k < needleLength; k++) {
+                    if (i+k >= haystack.length()) {
+                        return -1;
+                    }
+                    if (haystack[i+k] == needle[k]) {
+                        countingLetters++; 
+                        cout << "Count: " << countingLetters << endl;
+                    }
+                    if (countingLetters == needleLength) {
+                        return i;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+};
+
 #endif //STRINGEXERCISES_HPP

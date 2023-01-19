@@ -28,11 +28,9 @@ public:
     {
         int insertIndex = 1;
         int size = nums.size();
-        for (int i = 1; i < size; i++)
-        {
+        for (size_t i = 1; i < size; i++){
             // We skip to next index if we see a duplicate element
-            if (nums[i - 1] != nums[i])
-            {
+            if (nums[i - 1] != nums[i]){
                 cout << "Nums  " << nums[i - 1] << "not equal to " << nums[i] << endl;
                 // Storing the unique element at insertIndex index and incrementing the insertIndex by 1
                 nums[insertIndex] = nums[i];
@@ -40,8 +38,7 @@ public:
                 cout << "Insert index increased to: " << insertIndex << endl;
             }
         }
-        for (int i = 0; i < size; i++)
-        {
+        for (size_t i = 0; i < size; i++){
             cout << "Final Arrays: " << nums[i] << endl;
         }
         return insertIndex;
@@ -105,23 +102,23 @@ public:
         sort(nums2.begin(),nums2.end());
 
         vector<int> ans;
-        if(nums1.size()==0 || nums2.size()==0) return ans;
+        if (nums1.size() == 0 || nums2.size() ==0) {return ans;}
         int m = nums1.size();
         int n = nums2.size(); 
 
-        int i=0,j=0;
-        while(i<m && j<n){
-        if(nums1[i]<nums2[j]){
-            i++;
-        }
-        else if(nums1[i]>nums2[j]){
-            j++;
-        }
-        else{
-            ans.push_back(nums1[i]);
-            i++;j++;
-        }
-    }   
+        int i = 0, j = 0;
+        while(i < m && j < n){
+            if (nums1[i] < nums2[j]){
+                i++;
+            }
+            else if(nums1[i] > nums2[j]){
+                j++;
+            }
+            else {
+                ans.push_back(nums1[i]);
+                i++; j++;
+            }
+        }   
 
         return ans;
     }
@@ -142,17 +139,18 @@ Thus, the result should be [1,2,4].
 class Solution5 {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        vector<int>::iterator i;
-        for (i = digits.end()-1; i != digits.begin()-1; i--){
+        for (vector<int>::iterator i = digits.end()-1; i != digits.begin()-1; i--){
             (*i)++;
             if (*i == 10) {
-            *i=0; 
-            if (i == digits.begin()){
-                digits.insert(digits.begin(),1);
-                break;}}
+                *i=0; 
+                if (i == digits.begin()){
+                    digits.insert(digits.begin(),1);
+                    break;
+                }
+            }
             else {break;}
         }
-        for (i = digits.end()-1; i != digits.begin()-1; i--){
+        for (vector<int>::iterator i = digits.end()-1; i != digits.begin()-1; i--){
             cout << *i << endl;}
     return digits;
     }
@@ -178,18 +176,19 @@ class Solution6 {
 public:
     void moveZeroes(vector<int>& nums) {
         int lastNonZeroIndex = 0;
-        for (int i = 0; i < nums.size(); i++) {
+        for (size_t i = 0; i < nums.size(); i++) {
             if (nums[i] != 0) {
                 nums[lastNonZeroIndex++] = nums[i];
             }
         }
-        for (int i = lastNonZeroIndex; i < nums.size(); i++) {
+
+        for (size_t i = lastNonZeroIndex; i < nums.size(); i++) {
             nums[i] = 0;
         }
             
-    vector <int>::iterator i;
-    for (i = nums.begin(); i != nums.end(); i++){
-            cout << *i << endl;}
+        for (vector <int>::iterator i = nums.begin(); i != nums.end(); i++){
+                cout << *i << endl;
+        }
     }
 /*         vector<int>::iterator i;
         for (i = nums.begin(); i != nums.end(); i++){
@@ -200,10 +199,7 @@ public:
                 }
                 swap(*i, *j);
             }
-    } 
-    for (i = nums.begin(); i != nums.end(); i++){
-            cout << *i << endl;}
-    }*/
+    } */
 };
 
 /*
@@ -226,22 +222,23 @@ public:
         vector<int> answer = {0, 0};
         
         for (vector<int>::iterator i = nums.begin(); i != nums.end(); i++){
-            cout << *i << " ";}
+            cout << *i << " ";
+        }
         cout << endl << "End of starting line. Number " << target << endl;
-
-/*         for (it = nums.begin(); it != nums.end() ; ){
-            if (*it>target){
-                it = nums.erase(it);}
-            else {it++;}} */
         
-        for (int i = 0; i<nums.size(); i++){
-            for (int j = i+1; j<nums.size(); j++){
-                if (nums[i] + nums[j] == target) {cout << "Found: " << nums[i] << " and " << nums[j] << endl;
-                answer[0] = i; answer[1]=j;}
-        }}
+        for (size_t i = 0; i < nums.size(); i++){
+            for (size_t j = i+1; j < nums.size(); j++){
+                if (nums[i] + nums[j] == target) {
+                    cout << "Found: " << nums[i] << " and " << nums[j] << endl;
+                    answer[0] = i; answer[1]=j;
+                }
+            }
+        }
         
         for (vector<int>::iterator i = answer.begin(); i != answer.end(); i++){
-            cout << *i << " ";}
+            cout << *i << " ";
+        }
+
         cout << endl << "End of final line" << endl;
         return answer;
         
