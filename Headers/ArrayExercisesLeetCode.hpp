@@ -150,8 +150,7 @@ public:
             }
             else {break;}
         }
-        for (vector<int>::iterator i = digits.end()-1; i != digits.begin()-1; i--){
-            cout << *i << endl;}
+
     return digits;
     }
 };
@@ -245,11 +244,105 @@ public:
     }
 };
 
+/* You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, 
+representing the number of elements in nums1 and nums2 respectively.
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, 
+and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
+Example 1:
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
+Example 2:
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+Explanation: The arrays we are merging are [1] and [].
+The result of the merge is [1].
+ */
 
+class Solution8 {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        if (n == 0) {return;}
+        
+        /* for (size_t i = 0; i < n; i++){
+            nums1[m+i] = nums2[i];
+        }
+        sort(nums1.begin(), nums1.end());
+        for (vector<int>::iterator i = nums1.begin(); i != nums1.end(); i++){
+            cout << *i << " ";
+        } */
+        // OR
+        // {1,4,5,6,10,0,0,0,0}; and {1,2,6,9}; m=5, n=4
+        vector<int> solution;
+        size_t j = 0;
+        size_t i = 0;
+        while ((i < m)&&(j < n)){
+                if (nums1[i] <= nums2[j]) {
+                    solution.push_back(nums1[i]); i++;} //[1, 1, 2, 4, 5, 6, 6, 9, ]
+                else {
+                    solution.push_back(nums2[j]); j++;
+                }
+            
+        }
+        // Add remaining elements from nums1
+        while (i < m) {
+            solution.push_back(nums1[i]);
+            i++;
+        }
 
+        // Add remaining elements from nums2
+        while (j < n) {
+            solution.push_back(nums2[j]);
+            j++;
+        } 
+        
+        for (size_t i = 0; i < solution.size(); i++) {
+            nums1[i] = solution[i];
+        }
+        for (int x : nums1){
+            cout << x << " ";
+        }
 
+    }
+};
 
+/* You are a product manager and currently leading a team to develop a new product. 
+Unfortunately, the latest version of your product fails the quality check. 
+Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+You are given an API bool isBadVersion(version) which returns whether version is bad. 
+Implement a function to find the first bad version. You should minimize the number of calls to the API.
+Example 1:
+Input: n = 5, bad = 4
+Output: 4
+Explanation:
+call isBadVersion(3) -> false
+call isBadVersion(5) -> true
+call isBadVersion(4) -> true
+Then 4 is the first bad version.
+ */
+
+class Solution9 {
+public:
+    int firstBadVersion(int n) {
+        //false == good version, it doesnt have mistakes
+        
+        int left = 1;
+        int right = n;
+        int mid;
+
+        while(left <= right)
+        {
+            mid = left + (right-left)/2;
+           //  isBadVersion(mid)? right = mid - 1 : left = mid + 1;
+        }
+        return left;
+    }
+};
 
 #endif // ARRAYEXERCISES_HPP

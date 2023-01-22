@@ -149,4 +149,14 @@ CMakeFiles/STLExercises.dir/main.cpp.obj: \
  c:\mingw64\include\c++\12.2.0\tuple \
  c:\mingw64\include\c++\12.2.0\bits\uses_allocator.h \
  c:\mingw64\include\c++\12.2.0\bits\std_function.h \
- C:\Users\User\Documents\VS\ Projects\STLExercises\Headers/STLVector.hpp
+ c:\mingw64\include\c++\12.2.0\list \
+ c:\mingw64\include\c++\12.2.0\bits\stl_list.h \
+ c:\mingw64\include\c++\12.2.0\bits\allocated_ptr.h \
+ c:\mingw64\include\c++\12.2.0\ext\aligned_buffer.h \
+ c:\mingw64\include\c++\12.2.0\bits\list.tcc \
+ c:\mingw64\include\c++\12.2.0\map \
+ c:\mingw64\include\c++\12.2.0\bits\stl_tree.h \
+ c:\mingw64\include\c++\12.2.0\bits\stl_map.h \
+ c:\mingw64\include\c++\12.2.0\bits\stl_multimap.h \
+ c:\mingw64\include\c++\12.2.0\bits\erase_if.h \
+ C:\Users\User\Documents\VS\ Projects\STLExercises\Headers/ArrayExercisesLeetCode.hpp
