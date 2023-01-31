@@ -16,6 +16,7 @@ using namespace std;
 //#include "Headers/StringExercisesLeetCode.hpp"
 //#include "Headers/LinkedListExercisesLeetCode.hpp"
 //#include "Headers/BinaryTreeExercisesLeetCode.hpp"
+//#include "Headers/OtherLeetCode.hpp"
 
 /* 
 ListNode* CreateList(){
@@ -57,30 +58,29 @@ TreeNode* CreateBinaryTree2(){ //good binary
 }
 */
 
-
 #ifndef TESTING
 main(){
 
-    vector <int> v1 = {1,2,6,9};
+    vector <int> v1 = {1,2,6,10};
     vector <int> v2 = {6, 89, 23, 56, 123, 59, 12, 87, 34, 65, 4567, 2, 1, 54, 15};
     vector <int> v3 = {1,4,-6,-9};
     vector <int> v4 = {0,0,3,3,4,2,4,0,8};
     vector <int> v5 = {1,4,5,6,10,0,0,0,0};
+    vector <int> v6 = {0};
+    vector <int> v7 = {};
+    vector <int> v8 = {1};
     vector <char> c1 = {'H','a','n','n','a','h'};
     vector <char> c2 = {'H','e','l','l','o'};
     vector<char> c3 = {'A', ' ', 'm', 'a', 'n', ',', ' ', 'a', ' ', 'p', 'l', 'a', 'n', ',', ' ', 'a', ' ', 'c', 'a', 'n', 'a', 'l', ':', ' ', 'P', 'a', 'n', 'a', 'm', 'a'};
     int a1 = 123, a2 = 3456700, a3 = -592, a4 = 2;
     string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac", s6 = "race";
     vector <string> vs1 = {"babe", "babushka", "babaika", "bababababab"};
-    vector <int> v6 = {0};
-    vector <int> v7 = {};
-    vector <int> v8 = {1};
 
-    Solution8 myObj;
-    myObj.merge(v5, 5, v1, 4);
-    cout << "End";
-    cout << endl;
-    //cout << myObj.isValidBST(CreateBinaryTree2());
+    Solution12 myObj(v1);
+    
+    myObj.shuffle();
+    cout << endl << "End" << endl;
+    myObj.reset();
     /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;

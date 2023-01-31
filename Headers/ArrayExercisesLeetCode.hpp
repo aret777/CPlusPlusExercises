@@ -282,11 +282,12 @@ public:
         size_t j = 0;
         size_t i = 0;
         while ((i < m)&&(j < n)){
-                if (nums1[i] <= nums2[j]) {
-                    solution.push_back(nums1[i]); i++;} //[1, 1, 2, 4, 5, 6, 6, 9, ]
-                else {
-                    solution.push_back(nums2[j]); j++;
-                }
+            if (nums1[i] <= nums2[j]) {
+                solution.push_back(nums1[i]); i++;
+            } //[1, 1, 2, 4, 5, 6, 6, 9, ]
+            else {
+                solution.push_back(nums2[j]); j++;
+            }
             
         }
         // Add remaining elements from nums1
@@ -300,7 +301,7 @@ public:
             solution.push_back(nums2[j]);
             j++;
         } 
-        
+
         for (size_t i = 0; i < solution.size(); i++) {
             nums1[i] = solution[i];
         }
@@ -344,5 +345,116 @@ public:
         return left;
     }
 };
+
+/* Given an integer array nums, find the subarray with the largest sum, and return its sum.
+Example 1:
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+Example 2:
+Input: nums = [1]
+Output: 1
+Explanation: The subarray [1] has the largest sum 1.
+Example 3:
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23. */
+
+class Solution10 {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int n = nums.size();
+        int maxi = nums[0];
+        int sum = nums[0];
+        for (size_t i = 1; i < n; i++){
+            if (sum < 0) {
+            sum = nums[i]; //basically reloading sum to new possible array, if previous one gathered a lot of -1-2-3-4...
+            }
+            else {
+                sum += nums[i];
+            }
+            maxi = max(sum, maxi);
+        }
+        return maxi;
+    }
+};
+
+/* You are a professional robber planning to rob houses along a street. 
+Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that 
+adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses
+were broken into on the same night.
+Given an integer array nums representing the amount of money of each house, return the maximum amount of money
+you can rob tonight without alerting the police.
+
+Example 1:
+Input: nums = [1,2,3,1]
+Output: 4
+Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+Total amount you can rob = 1 + 3 = 4.
+
+Example 2:
+Input: nums = [2,7,9,3,1]
+Output: 12
+Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
+Total amount you can rob = 2 + 9 + 1 = 12. */
+
+class Solution11 {
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        int prev2 = nums[0];
+
+        if (n == 1) {
+            return nums[0];
+        }
+
+        int prev1 = max(prev2, nums[1]);
+        for(int i = 2; i < n; i++){
+            int cur = max(prev1,prev2 + nums[i]);
+            prev2 = prev1;
+            prev1 = cur;
+        }
+        return prev1;
+    }
+};
+
+
+/* Given an integer array nums, design an algorithm to randomly shuffle the array. 
+All permutations of the array should be equally likely as a result of the shuffling.
+Implement the Solution class:
+Solution(int[] nums) Initializes the object with the integer array nums.
+int[] reset() Resets the array to its original configuration and returns it.
+int[] shuffle() Returns a random shuffling of the array. */
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution* obj = new Solution(nums);
+ * vector<int> param_1 = obj->reset();
+ * vector<int> param_2 = obj->shuffle();
+ */
+
+class Solution12 {
+public:
+    vector<int> duplic;
+    vector<int> shuffleArr;
+    Solution12(vector<int>& nums) {
+        duplic = nums;
+        shuffleArr = nums;
+    }
+    
+    vector<int> reset() {
+        return duplic;
+    }
+    
+    vector<int> shuffle() {
+        int randomPos = rand()% shuffleArr.size();
+        for (size_t i = 0; i < shuffleArr.size(); i++){
+            swap(shuffleArr[i], shuffleArr[randomPos]);
+        }
+        return shuffleArr;
+    }
+};
+
+
 
 #endif // ARRAYEXERCISES_HPP
