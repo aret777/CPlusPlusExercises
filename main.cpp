@@ -10,13 +10,13 @@
 using namespace std;
 
 //#include "Headers/main.hpp"
-#include "Headers/ArrayExercisesLeetCode.hpp"
+//#include "Headers/ArrayExercisesLeetCode.hpp"
 //#include "Headers/STLVector.hpp"
 //#include "Headers/STLMap.hpp"
 //#include "Headers/StringExercisesLeetCode.hpp"
 //#include "Headers/LinkedListExercisesLeetCode.hpp"
 //#include "Headers/BinaryTreeExercisesLeetCode.hpp"
-//#include "Headers/OtherLeetCode.hpp"
+#include "Headers/OtherLeetCode.hpp"
 
 /* 
 ListNode* CreateList(){
@@ -75,12 +75,13 @@ main(){
     int a1 = 123, a2 = 3456700, a3 = -592, a4 = 2;
     string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac", s6 = "race";
     vector <string> vs1 = {"babe", "babushka", "babaika", "bababababab"};
+    uint32_t abc = 00000000000000000000000000001011;
+    //uint32_t abd = 00000010100101000001111010011100;
 
-    Solution12 myObj(v1);
-    
-    myObj.shuffle();
+    Solution6 myObj;
+    myObj.isValid("(]");
     cout << endl << "End" << endl;
-    myObj.reset();
+    myObj.isValid("([)]");
     /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;

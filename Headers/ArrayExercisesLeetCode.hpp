@@ -437,6 +437,7 @@ class Solution12 {
 public:
     vector<int> duplic;
     vector<int> shuffleArr;
+    
     Solution12(vector<int>& nums) {
         duplic = nums;
         shuffleArr = nums;
@@ -447,14 +448,59 @@ public:
     }
     
     vector<int> shuffle() {
-        int randomPos = rand()% shuffleArr.size();
-        for (size_t i = 0; i < shuffleArr.size(); i++){
-            swap(shuffleArr[i], shuffleArr[randomPos]);
+        int randomPos1 = 0; 
+        vector<bool> usedPos (duplic.size(), false);
+        for (size_t i = 0; i < duplic.size(); i++){
+            randomPos1 = rand()% shuffleArr.size();
+            while (usedPos[randomPos1]){
+                randomPos1 = rand()% shuffleArr.size();
+            }
+            shuffleArr[randomPos1] = duplic[i];
+            usedPos[randomPos1] = true;
         }
         return shuffleArr;
     }
 };
 
 
+/* Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Implement the MinStack class:
+MinStack() initializes the stack object.
+void push(int val) pushes the element val onto the stack.
+void pop() removes the element on the top of the stack.
+int top() gets the top element of the stack.
+int getMin() retrieves the minimum element in the stack.
+You must implement a solution with O(1) time complexity for each function. */
+
+class MinStack {
+public:
+    vector <int> stack;
+    vector <int> minimal;
+    MinStack() {
+        
+    }
+    
+    void push(int val) {
+        stack.push_back(val);
+        if ((minimal.empty()) || (val <= minimal.back())) {
+            minimal.push_back(val);
+        }
+    }
+    
+    void pop() {
+        if (stack.back() == minimal.back()) {
+            minimal.pop_back();
+        }
+        stack.pop_back();
+    }
+    
+    int top() {
+        return stack[stack.size()-1];
+    }
+    
+    int getMin() {
+        return minimal.back();
+    }
+};
 
 #endif // ARRAYEXERCISES_HPP

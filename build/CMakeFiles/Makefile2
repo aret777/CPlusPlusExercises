@@ -200,8 +200,8 @@ googletest/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-googletest/googlemock/CMakeFiles/gmock_main.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
 googletest/googlemock/CMakeFiles/gmock_main.dir/all: googletest/googlemock/CMakeFiles/gmock.dir/all
+googletest/googlemock/CMakeFiles/gmock_main.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\User\Documents\VS Projects\STLExercises\build\CMakeFiles" --progress-num=7,8 "Built target gmock_main"
@@ -280,8 +280,8 @@ googletest/googletest/CMakeFiles/gtest_main.dir/clean:
 
 # All Build rule for target.
 test/CMakeFiles/StandartTests.dir/all: CMakeFiles/STLExercises.dir/all
-test/CMakeFiles/StandartTests.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/StandartTests.dir/all: googletest/googletest/CMakeFiles/gtest_main.dir/all
+test/CMakeFiles/StandartTests.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\StandartTests.dir\build.make test/CMakeFiles/StandartTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\StandartTests.dir\build.make test/CMakeFiles/StandartTests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\User\Documents\VS Projects\STLExercises\build\CMakeFiles" --progress-num=3,4 "Built target StandartTests"
