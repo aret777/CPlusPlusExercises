@@ -7,6 +7,7 @@
 #include <bitset>
 #include <string>
 #include <stack>
+#include <unordered_set>
 
 using namespace std;
 
@@ -199,7 +200,23 @@ public:
     
 };
 
+/* Given an array nums containing n distinct numbers in the range [0, n], 
+return the only number in the range that is missing from the array.
+Input: nums = [3,0,1]
+Output: 2
+Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number */
 
-
-
+class Solution7 {
+public:
+    int missingNumber(vector<int>& nums) {
+        unordered_set<int> seen(nums.begin(), nums.end());
+    
+        for (size_t i = 0; i <= nums.size() + 1; i++) {
+            if (seen.find(i) == seen.end()) {
+                return i;
+            }
+        }
+    return -1; // If no missing number is found
+    }
+};
 #endif //OTHEREXERCISES_HPP

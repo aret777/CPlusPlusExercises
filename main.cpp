@@ -10,13 +10,13 @@
 using namespace std;
 
 //#include "Headers/main.hpp"
-//#include "Headers/ArrayExercisesLeetCode.hpp"
+#include "Headers/ArrayExercisesLeetCode.hpp"
 //#include "Headers/STLVector.hpp"
 //#include "Headers/STLMap.hpp"
 //#include "Headers/StringExercisesLeetCode.hpp"
 //#include "Headers/LinkedListExercisesLeetCode.hpp"
 //#include "Headers/BinaryTreeExercisesLeetCode.hpp"
-#include "Headers/OtherLeetCode.hpp"
+//#include "Headers/OtherLeetCode.hpp"
 
 /* 
 ListNode* CreateList(){
@@ -61,14 +61,14 @@ TreeNode* CreateBinaryTree2(){ //good binary
 #ifndef TESTING
 main(){
 
-    vector <int> v1 = {1,2,6,10};
+    vector <int> v1 = {1,2,3,3};
     vector <int> v2 = {6, 89, 23, 56, 123, 59, 12, 87, 34, 65, 4567, 2, 1, 54, 15};
     vector <int> v3 = {1,4,-6,-9};
     vector <int> v4 = {0,0,3,3,4,2,4,0,8};
     vector <int> v5 = {1,4,5,6,10,0,0,0,0};
     vector <int> v6 = {0};
     vector <int> v7 = {};
-    vector <int> v8 = {1};
+    vector <int> v8 = {1,7,3,6,5,6};
     vector <char> c1 = {'H','a','n','n','a','h'};
     vector <char> c2 = {'H','e','l','l','o'};
     vector<char> c3 = {'A', ' ', 'm', 'a', 'n', ',', ' ', 'a', ' ', 'p', 'l', 'a', 'n', ',', ' ', 'a', ' ', 'c', 'a', 'n', 'a', 'l', ':', ' ', 'P', 'a', 'n', 'a', 'm', 'a'};
@@ -78,10 +78,10 @@ main(){
     uint32_t abc = 00000000000000000000000000001011;
     //uint32_t abd = 00000010100101000001111010011100;
 
-    Solution6 myObj;
-    myObj.isValid("(]");
+    Solution14 myObj;
+    myObj.pivotIndex(v1);
     cout << endl << "End" << endl;
-    myObj.isValid("([)]");
+    myObj.pivotIndex(v8);
     /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;
