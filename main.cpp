@@ -10,18 +10,18 @@
 using namespace std;
 
 //#include "Headers/main.hpp"
-#include "Headers/ArrayExercisesLeetCode.hpp"
+//#include "Headers/ArrayExercisesLeetCode.hpp"
 //#include "Headers/STLVector.hpp"
 //#include "Headers/STLMap.hpp"
 //#include "Headers/StringExercisesLeetCode.hpp"
-//#include "Headers/LinkedListExercisesLeetCode.hpp"
+#include "Headers/LinkedListExercisesLeetCode.hpp"
 //#include "Headers/BinaryTreeExercisesLeetCode.hpp"
 //#include "Headers/OtherLeetCode.hpp"
 
-/* 
+
 ListNode* CreateList(){
     //list creation
-    ListNode* head = new ListNode(1);
+    ListNode* head = new ListNode(1); //creating first head node with value 1
     ListNode* current = head;
 
     for (size_t i = 2; i <= 5; i++) {
@@ -33,7 +33,7 @@ ListNode* CreateList(){
     //ListNode* head = new ListNode({9, new ListNode(8, new ListNode(7, new ListNode(6, new ListNode(5))))});
     return head;
 } 
-
+/* 
 TreeNode* CreateBinaryTree1(){ //just exemplar
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
@@ -77,16 +77,26 @@ main(){
     vector <string> vs1 = {"babe", "babushka", "babaika", "bababababab"};
     uint32_t abc = 00000000000000000000000000001011;
     //uint32_t abd = 00000010100101000001111010011100;
+    ListNode* list1 = CreateList();
+    ListNode* list2 = CreateList();
 
-    Solution14 myObj;
-    myObj.pivotIndex(v1);
+    Solution4 myObj;
+    //myObj.mergeTwoLists(list1, list2);
     cout << endl << "End" << endl;
-    myObj.pivotIndex(v8);
+    //myObj.mergeTwoLists(v2);
     /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;
     myObj.reverse(a4); */
 
+
+    ListNode* mergedList = myObj.mergeTwoLists(list1, list2);
+    cout << "Merged list: ";
+    while (mergedList != nullptr) {
+        cout << mergedList->val << " ";
+        mergedList = mergedList->next;
+    }
+    cout << endl;
 
     /* 
     ListNode* current = CreateList();
