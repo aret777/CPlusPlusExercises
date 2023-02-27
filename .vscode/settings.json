@@ -65,6 +65,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "cassert": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "regex": "cpp"
     }
 }

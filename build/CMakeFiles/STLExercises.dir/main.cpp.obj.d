@@ -159,4 +159,4 @@ CMakeFiles/STLExercises.dir/main.cpp.obj: \
  c:\mingw64\include\c++\12.2.0\bits\stl_map.h \
  c:\mingw64\include\c++\12.2.0\bits\stl_multimap.h \
  c:\mingw64\include\c++\12.2.0\bits\erase_if.h \
- C:\Users\User\Documents\VS\ Projects\STLExercises\Headers/ArrayExercisesLeetCode.hpp
+ C:\Users\User\Documents\VS\ Projects\STLExercises\Headers/main.hpp

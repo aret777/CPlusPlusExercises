@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20230225-2311-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.25.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-8DBJDJP"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="12938"
+	TotalPhysicalMemory="8074"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1800"
+	>
+	<Testing>
+		<StartDateTime>Feb 26 01:31 ????????? (????)</StartDateTime>
+		<StartTestTime>1677367917</StartTestTime>
+		<TestList>
+			<Test>./test/StandartTests</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>StandartTests</Name>
+			<Path>./test</Path>
+			<FullName>./test/StandartTests</FullName>
+			<FullCommandLine>"C:\Users\User\Documents\VS Projects\STLExercises\build\test\StandartTests.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0524079</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>"C:\Users\User\Documents\VS Projects\STLExercises\build\test\StandartTests.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyVUlFPwjAQfu+vuEeWwIJEE7PEB4JgjKKGoT4wYko5R7VrsdcK/ns7ZggjSvAeltvdd/3u+9qR11rqHAoudSOCV2sK6CXZI6GlzTe7NMIXqB1lTyk8WPOGIuTp+La/RiskIWW5MblCh+R2U7Iiy8vspTw8FoJNLrYxhdEPcwdKDFXUJ5sfIC8dxmzS2sYUrpSZcVX1UX9Ka3S5FhC6ll/ugWuH7u7KJjB6vINNTGudeBwmhlxYQz2jVFApjQ7wKu5vjoFDow0FRQdIht0e+7e/GzuHwcSSk2KxXCaddgIDLpW3yPrrZZjBOeCH50q6LzCv4BZICJ9ceaSEAQTixrr51SRfRKxc7HkhxQIkJXB2Ggqhvl8+ZwOvK11zE5xeGfteGjLoXt/2L3+TttV/1F1UaHDGcRWx427bIbetuVnp+mP68xGB5TquEwUFD900rRRU2Lguqyo2QUkqbZ2hMqvksHLGwtRPe9xPx+wbB7ESYw==</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Feb 26 01:31 ????????? (????)</EndDateTime>
+		<EndTestTime>1677367917</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
