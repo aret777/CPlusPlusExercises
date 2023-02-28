@@ -325,4 +325,34 @@ public:
     };
     std::vector<std::string> getShapes() { return shapes; };
 };
+
+//---------------------------------------------------------------------------------
+// Singleton pattern.
+class Leader
+{
+private:
+	static Leader * _instance;
+	Leader()
+	{
+		cout << "New leader elected" << endl;
+	}
+public:
+	static Leader * getInstance()
+	{
+		if (_instance == NULL)
+		{
+			_instance = new Leader;
+		}
+		return _instance;
+	}
+	void giveSpeech()
+	{
+		cout << "Address the public" << endl;
+
+	}
+};
+
+Leader* Leader::_instance = NULL;
+
+
 #endif // DESIGN_HPP

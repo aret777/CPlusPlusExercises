@@ -176,8 +176,8 @@ main(){
     std::cout << "Here's a birthday card:\n\n" << bct.generate("Bob", "Jane") << "\n";
     std::cout << "Here's a new year's card:\n\n" << nyct.generate("Bob", "Jane") << "\n";
     */
-
-   Canvas *canvas = new Canvas;
+    /* //Memento pattern (to undo things)
+    Canvas *canvas = new Canvas;
     
     canvas->addShape("rhombus");
     canvas->addShape("triangle");
@@ -211,9 +211,12 @@ main(){
     std::cout << "\n";
  
     delete canvas;
-
-
-
+    */
+    /* //Singleton
+    Leader::getInstance()->giveSpeech();
+	Leader *elected = elected->getInstance();
+	elected->giveSpeech();
+    */
 
 
 

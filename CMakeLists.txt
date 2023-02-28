@@ -13,7 +13,15 @@ enable_testing()
 add_subdirectory(googletest)
 
 set(Headers
-    Headers/main.hpp)
+    Headers/ArrayExercisesLeetCode.hpp
+    Headers/BinaryTreeExercisesLeetCode.hpp
+    Headers/DesignPatterns.hpp
+    Headers/LinkedListExercisesLeetCode.hpp
+    Headers/OtherLeetCode.hpp
+    Headers/STLMap.hpp
+    Headers/STLVector.hpp
+    Headers/StringExercisesLeetCode.hpp
+    )
 set(Sources
     main.cpp)
 
