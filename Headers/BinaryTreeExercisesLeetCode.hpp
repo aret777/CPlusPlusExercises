@@ -32,7 +32,7 @@ public:
         if (root == NULL) {return 0;}
         
         return max(maxDepth(root->left), maxDepth(root->right)) + 1; //max() is function in STL to compare two values and return max
-    }
+    } //so when we reach end, NULL, it return 0, and each iteration then adds +1, making equal to depth of root
 };
 
 /* Given the root of a binary tree, determine if it is a valid binary search tree (BST).

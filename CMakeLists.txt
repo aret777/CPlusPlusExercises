@@ -21,6 +21,7 @@ set(Headers
     Headers/STLMap.hpp
     Headers/STLVector.hpp
     Headers/StringExercisesLeetCode.hpp
+    Headers/OOPfile.hpp
     )
 set(Sources
     main.cpp)

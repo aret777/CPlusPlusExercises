@@ -9,9 +9,9 @@
 #include <string>
 using namespace std;
 
-#include "Headers/DesignPatterns.hpp"
+//#include "Headers/DesignPatterns.hpp"
 //#include "Headers/ArrayExercisesLeetCode.hpp"
-//#include "Headers/STLVector.hpp"
+#include "Headers/STLVector.hpp"
 //#include "Headers/STLMap.hpp"
 //#include "Headers/StringExercisesLeetCode.hpp"
 //#include "Headers/LinkedListExercisesLeetCode.hpp"
@@ -61,11 +61,11 @@ TreeNode* CreateBinaryTree2(){ //good binary
 #ifndef TESTING
 main(){
 
-    vector <int> v1 = {1,2,3,3};
+    vector <int> v1 = {1,2,3,4};
     vector <int> v2 = {6, 89, 23, 56, 123, 59, 12, 87, 34, 65, 4567, 2, 1, 54, 15};
     vector <int> v3 = {1,4,-6,-9};
     vector <int> v4 = {0,0,3,3,4,2,4,0,8};
-    vector <int> v5 = {1,4,5,6,10,0,0,0,0};
+    vector <int> v5 = {1,4,5,6,10,20,30,40,50};
     vector <int> v6 = {0};
     vector <int> v7 = {};
     vector <int> v8 = {1,7,3,6,5,6};
@@ -73,7 +73,7 @@ main(){
     vector <char> c2 = {'H','e','l','l','o'};
     vector<char> c3 = {'A', ' ', 'm', 'a', 'n', ',', ' ', 'a', ' ', 'p', 'l', 'a', 'n', ',', ' ', 'a', ' ', 'c', 'a', 'n', 'a', 'l', ':', ' ', 'P', 'a', 'n', 'a', 'm', 'a'};
     int a1 = 123, a2 = 3456700, a3 = -592, a4 = 2;
-    string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac", s6 = "race";
+    string s1 = "raceacar", s2 = "hannah", s3 = "Do geese see God?", s4 = "abcdefghijklmnop", s5 = "reerac", s6 = "aaaabbccd";
     vector <string> vs1 = {"babe", "babushka", "babaika", "bababababab"};
     uint32_t abc = 00000000000000000000000000001011;
     //uint32_t abd = 00000010100101000001111010011100;
@@ -81,10 +81,10 @@ main(){
     //ListNode* list2 = CreateList();
 
     
-    //Solution6 myObj;
-    //myObj.mergeTwoLists(list1, list2);
-    cout << endl << "Patterns start" << endl;
-    //myObj.mergeTwoLists(v2);
+    Solution1 myObj;
+    cout << myObj.search(v1, 5) << endl;
+    cout << endl << "Next" << endl;
+    cout << myObj.search(v5, 50) << endl;
     /*cout << endl;
     cout << myObj.isPalindrome(s3);
     cout << endl;
